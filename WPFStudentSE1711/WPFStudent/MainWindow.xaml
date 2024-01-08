@@ -1,0 +1,64 @@
+﻿<Window x:Class="WPFStudent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFStudent"
+        mc:Ignorable="d"
+        Title="Student" Height="600" Width="600">
+    <Grid>
+        <StackPanel Background="LightBlue" Orientation ="Vertical">
+            <Label Name="lblInstruction" FontSize="15" Content="Enter Student Information"/>
+            <TextBox Name="txtId"  Height="25"
+                 Text= "{ Binding Path=Id, Mode=OneWay}" 
+                 DataContext="{Binding ElementName=lvStudent, Path=SelectedItem}"
+                 Visibility="Collapsed"    />
+            <Label Name="lblStudentName" Content="Student Name"/>
+            <TextBox Name="txtName"  Height="25"
+                 Text= "{ Binding Path=Name, Mode=OneWay}" 
+                 DataContext="{Binding ElementName=lvStudent, Path=SelectedItem}"/>
+            <Label Name="lblColor" Content="Date of Birthd"/>
+            <DatePicker Name="txtDateofBirth"  Height="25" Width="150" HorizontalAlignment="Left"
+                 SelectedDate= "{ Binding Path=Dob, Mode=OneWay}" 
+                 DataContext="{Binding ElementName=lvStudent, Path=SelectedItem}"/>
+            <Label Name="lblBrand" Content="Gender"/>
+            <RadioButton Name="rdoMale" Content="Male"
+                 IsChecked="{Binding Path=Male, Mode=OneWay}"
+                 DataContext="{Binding ElementName=lvStudent, Path=SelectedItem}"/>
+            <RadioButton Name="rdoFemale" Content="Female"
+                 IsChecked="{Binding Path=Female, Mode=OneWay}"
+                DataContext="{Binding ElementName=lvStudent, Path=SelectedItem}"/>
+            
+            <Label Name="lbl2" Content="Major:"/>
+            <ComboBox Name="cboNganh" 
+                SelectedValue="{Binding Path=Major, Mode=OneWay}"    
+                DataContext="{Binding ElementName=lvStudent, Path=SelectedItem}"
+                DisplayMemberPath="Name"
+                SelectedValuePath="Id"
+                      />
+
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btnDisplay" Width="80" 
+             Margin="5,10,0,0" Content="Display" Click="btnDisplay_Click"/>
+                <Button Name="btnAdd" Width="80" 
+                Margin="20,10,0,0" Content="Create" Click="btnAdd_Click"/>
+                <Button Name="btnUpdate" Width="80" 
+                Margin="20,10,0,0" Content="Update" Click="btnUpdate_Click"/>
+                <Button Name="btnDelete" Width="80" 
+                Margin="20,10,0,0" Content="Delete" Click="btnDelete_Click"/>
+            </StackPanel>
+            <ListView x:Name="lvStudent" Height="Auto" MouseLeftButtonUp="lvStudent_MouseLeftButtonUp">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID" Width="50" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="Student Name" Width="130" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="DoB" Width="130" DisplayMemberBinding="{Binding Dob, StringFormat=dd/MM/yyyy}"/>
+                        <GridViewColumn Header="Gender" Width="100" DisplayMemberBinding="{Binding GenderString}"/>
+                        <GridViewColumn Header="Major" Width="130" DisplayMemberBinding="{Binding MajorName}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+    </Grid>
+</Window>
