@@ -1,0 +1,51 @@
+﻿<Window x:Class="DirectorInfo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DirectorInfo"
+        mc:Ignorable="d"
+        Title="DirectorWindow" Height="500" Width="1146">
+    <Grid Margin="0,0,73,0">
+        <Label Content="Director's info" HorizontalAlignment="Left" Margin="40,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.619,-1.212" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Director Name" HorizontalAlignment="Left" Margin="40,71,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dob" HorizontalAlignment="Left" Margin="40,113,0,0" VerticalAlignment="Top"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="40,159,0,0" VerticalAlignment="Top"/>
+        <Label Content="Is male" HorizontalAlignment="Left" Margin="40,207,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nationality" HorizontalAlignment="Left" Margin="40,257,0,0" VerticalAlignment="Top"/>
+
+        <TextBox HorizontalAlignment="Left" Name="txtId" Margin="159,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                 IsReadOnly="True" Text="{Binding Id}" DataContext="{Binding SelectedItem, ElementName=lsDirector}"/>
+        <TextBox HorizontalAlignment="Left" Name="txtName" Margin="159,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                 Text="{Binding Name}" DataContext="{Binding SelectedItem, ElementName=lsDirector}"
+                 />
+        <DatePicker HorizontalAlignment="Left" Name="dpDob" Margin="161,115,0,0" VerticalAlignment="Top"
+                    Text="{Binding Dob}" DataContext="{Binding SelectedItem, ElementName=lsDirector}"
+                    />
+        <TextBox HorizontalAlignment="Left" Name="txtDescription" Margin="161,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                 Text="{Binding Description}" DataContext="{Binding SelectedItem, ElementName=lsDirector}"/>
+        <CheckBox Name="cbMale" HorizontalAlignment="Left" Margin="161,212,0,0" VerticalAlignment="Top"
+                  IsChecked="True"
+                  />
+        <TextBox HorizontalAlignment="Left" Name="txtNationality" Margin="161,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                 Text="{Binding Nationality}" DataContext="{Binding SelectedItem, ElementName=lsDirector}"/>
+        <Button Content="Add To List" Name="btnAddToList" HorizontalAlignment="Left" Margin="161,316,0,0" VerticalAlignment="Top" Width="120" Click="btnAddToList_Click"/>
+        <Button Content="Send To Server" Name="btnSendToServer" HorizontalAlignment="Left" Margin="638,417,0,0" VerticalAlignment="Top" Width="120" Click="btnSendToServer_Click" />
+        <Button Content="Save To File" Name="btnSaveToFile" HorizontalAlignment="Left" Margin="638,376,0,0" VerticalAlignment="Top" Width="120" Click="btnSaveToFile_Click" />
+        <ListView Margin="303,71,94,139" Name="lsDirector" PreviewMouseLeftButtonUp="listView_Click">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Director Name" Width="130" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="Dob" Width="130" DisplayMemberBinding="{Binding Path=Dob, StringFormat='dd/MM/yyyy'}"/>
+                    <GridViewColumn Header="Description" Width="130" DisplayMemberBinding="{Binding Path=Description}"/>
+                    <GridViewColumn Header="Gender" Width="130" DisplayMemberBinding="{Binding Path=GenderString}"/>
+                    <GridViewColumn Header="Nationality" Width="130" DisplayMemberBinding="{Binding Path=Nationality}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Search" x:Name="btnSearch" HorizontalAlignment="Left" Margin="24,386,0,0" VerticalAlignment="Top" Width="60" Click="btnSearch_Click" />
+        <TextBox HorizontalAlignment="Left" x:Name="txtSearch" Margin="169,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <Button Content="Load Data" x:Name="btnLoadData" HorizontalAlignment="Left" Margin="24,316,0,0" VerticalAlignment="Top" Width="120" Click="btnLoadData_Click"/>
+
+    </Grid>
+</Window>

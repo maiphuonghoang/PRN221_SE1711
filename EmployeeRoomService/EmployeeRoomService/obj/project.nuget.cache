@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JHQhR/WeJd2y9tCN98T2LT3loZ8o4U/Z0FExaVf8i0xaEiLLTO/2oWolx3SEbYW8Me4JgSNgVR7hBCm2ufNlqQ==",
+  "dgSpecHash": "0Xq6ihofDrsba986uzbKEEa0v88uz9LCLLjOhKFqWTu048tMjB0TYnIsbtPsS8D8BTqiftauQMKKAzDfWVU+hg==",
   "success": true,
-  "projectFilePath": "D:\\SPRING_2024_FPT\\PRN221\\PE\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj",
+  "projectFilePath": "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

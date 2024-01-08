@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SPRING_2024_FPT\\PRN221\\WPFStudentSE1711\\WPFStudent\\WPFStudentSE1711.csproj": {}
+    "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\WPFStudentSE1711\\WPFStudent\\WPFStudentSE1711.csproj": {}
   },
   "projects": {
-    "D:\\SPRING_2024_FPT\\PRN221\\WPFStudentSE1711\\WPFStudent\\WPFStudentSE1711.csproj": {
+    "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\WPFStudentSE1711\\WPFStudent\\WPFStudentSE1711.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SPRING_2024_FPT\\PRN221\\WPFStudentSE1711\\WPFStudent\\WPFStudentSE1711.csproj",
+        "projectUniqueName": "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\WPFStudentSE1711\\WPFStudent\\WPFStudentSE1711.csproj",
         "projectName": "WPFStudentSE1711",
-        "projectPath": "D:\\SPRING_2024_FPT\\PRN221\\WPFStudentSE1711\\WPFStudent\\WPFStudentSE1711.csproj",
+        "projectPath": "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\WPFStudentSE1711\\WPFStudent\\WPFStudentSE1711.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\SPRING_2024_FPT\\PRN221\\WPFStudentSE1711\\WPFStudent\\obj\\",
+        "outputPath": "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\WPFStudentSE1711\\WPFStudent\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SPRING_2024_FPT\\PRN221\\PE\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj": {}
+    "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj": {}
   },
   "projects": {
-    "D:\\SPRING_2024_FPT\\PRN221\\PE\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj": {
+    "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SPRING_2024_FPT\\PRN221\\PE\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj",
+        "projectUniqueName": "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj",
         "projectName": "EmployeeRoomService",
-        "projectPath": "D:\\SPRING_2024_FPT\\PRN221\\PE\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj",
+        "projectPath": "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\EmployeeRoomService\\EmployeeRoomService\\EmployeeRoomService.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\SPRING_2024_FPT\\PRN221\\PE\\EmployeeRoomService\\EmployeeRoomService\\obj\\",
+        "outputPath": "D:\\SPRING_2024_FPT\\PRN221\\PRN221_SE1711\\EmployeeRoomService\\EmployeeRoomService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
