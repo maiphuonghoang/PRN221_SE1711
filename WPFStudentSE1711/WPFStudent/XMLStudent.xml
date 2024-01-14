@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+	<XMLStudent>
+		<!--id tự identity-->
+		<Id>0</Id>
+		<Name >Maria Anders</Name>
+		<Major >1</Major>
+		<Dob>1985-1-5</Dob>
+		<Gender>0</Gender>
+	</XMLStudent>
+	

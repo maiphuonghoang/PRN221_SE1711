@@ -46,6 +46,8 @@
                 Margin="20,10,0,0" Content="Update" Click="btnUpdate_Click"/>
                 <Button Name="btnDelete" Width="80" 
                 Margin="20,10,0,0" Content="Delete" Click="btnDelete_Click"/>
+                <Button Name="btnXML" Width="80" 
+                Margin="20,10,0,0" Content="Add XML" Click="btnXML_Click"/>
             </StackPanel>
             <ListView x:Name="lvStudent" Height="Auto" MouseLeftButtonUp="lvStudent_MouseLeftButtonUp">
                 <ListView.View>
