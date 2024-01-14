@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Medicines>
+	<Medicine MedicineId ="O1">
+		<GroupId>1</GroupId>
+		<SupplierId>2</SupplierId>
+		<MedicineName>Nghệ An 1</MedicineName>
+		<Price>6000</Price>
+		<Amount>20000</Amount>
+		<ExpiriDate>01-01-2004</ExpiriDate>
+		<Preserve>no</Preserve>
+		<UserManual>abc xyz</UserManual>
+	</Medicine>
+	<Medicine MedicineId ="O2">
+		<GroupId>1</GroupId>
+		<SupplierId>2</SupplierId>
+		<MedicineName>Nghệ An 2</MedicineName>
+		<Price>6000</Price>
+		<Amount>20000</Amount>
+		<ExpiriDate>01-01-2004</ExpiriDate>
+		<Preserve>no</Preserve>
+		<UserManual>abc xyz</UserManual>
+	</Medicine>
+	<Medicine MedicineId ="C1">
+		<GroupId>1</GroupId>
+		<SupplierId>2</SupplierId>
+		<MedicineName>Nghệ An 3</MedicineName>
+		<Price>6000</Price>
+		<Amount>20000</Amount>
+		<ExpiriDate>01-01-2004</ExpiriDate>
+		<Preserve>no</Preserve>
+		<UserManual>abc xyz</UserManual>
+	</Medicine>
+</Medicines>
