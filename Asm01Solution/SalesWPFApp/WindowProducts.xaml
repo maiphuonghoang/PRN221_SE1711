@@ -57,6 +57,8 @@
             <Button x:Name="btnUpdateProduct" Width="80px" Height="20" Margin="50 10 20 10" Content="Update" Click="btnUpdateProduct_Click"/>
             <Button x:Name="btnDeleteProduct" Width="80px" Height="20" Margin="50 10 20 10" Content="Delete" Click="btnDeleteProduct_Click"/>
             <Button x:Name="btnResetProduct" Width="80px" Height="20" Margin="50 10 20 10" Content="Reset" Click="btnResetProduct_Click"/>
+
+
         </StackPanel>
 
         <ListView Grid.Row="6" Grid.ColumnSpan="6" Width="780" Name="ListView" SelectionChanged="ListView_SelectionChanged">

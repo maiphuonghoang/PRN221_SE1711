@@ -36,7 +36,7 @@ namespace SalesWPFApp
             _orderDetailRepository = orderDetailRepository;
             InitializeComponent();
         }
-
+        private bool isAdmin;
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string email = txtEmail.Text;
@@ -47,12 +47,14 @@ namespace SalesWPFApp
             {
                 if (email.Equals(admin["email"]) && password.Equals(admin["password"]))
                 {
+                    GlobalValues.IsAdmin = true;
                     WindowProducts windowProducts = new WindowProducts(_productRepository, _memberRepository, _orderRepository, _orderDetailRepository);
                     windowProducts.Show();
                     this.Close();
                 }
                 else
                 {
+                    GlobalValues.IsAdmin = false;
                     Member member = _memberRepository.GetMemberByEmail(email, password);
                     if (member != null)
                     {

@@ -41,6 +41,11 @@ namespace SalesWPFApp
         private void LoadData()
         {
             ListView.ItemsSource = _memberRepository.GetAllMembers();
+            if (GlobalValues.IsAdmin == false)
+            {
+                btnProductManagement.IsEnabled = false;
+                btnDeleteMember.IsEnabled = false;
+            }
         }
 
         private void btnLoadMember_Click(object sender, RoutedEventArgs e)

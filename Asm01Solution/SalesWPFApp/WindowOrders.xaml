@@ -66,6 +66,7 @@
             <Button x:Name="btnUpdateOrder" Width="80px" Height="20" Margin="50 10 20 10" Content="Update" Click="btnUpdateOrder_Click"/>
             <Button x:Name="btnDeleteOrder" Width="80px" Height="20" Margin="50 10 20 10" Content="Delete" Click="btnDeleteOrder_Click"/>
             <Button x:Name="btnResetOrder" Width="80px" Height="20" Margin="50 10 20 10" Content="Reset" Click="btnResetOrder_Click"/>
+            <Button x:Name="btnReportStatistic" Width="95" Height="20" Margin="50 10 20 10" Content="Report Statistic" Click="btnReportStatistic_Click"/>
         </StackPanel>
 
         <ListView Grid.Row="6" Grid.ColumnSpan="6" Width="780" Name="ListView" SelectionChanged="ListView_SelectionChanged">

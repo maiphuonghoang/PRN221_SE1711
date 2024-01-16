@@ -26,6 +26,7 @@ namespace SalesWPFApp
             serviceCollection.AddTransient<WindowMembers>();
             serviceCollection.AddTransient<WindowOrders>();
             serviceCollection.AddTransient<WindowInsertOrder>();
+            serviceCollection.AddTransient<WindowReportStatistics>();
 
             serviceCollection.AddScoped<IOrderRepository, OrderRepository>();
             serviceCollection.AddScoped<IMemberRepository, MemberRepository>();

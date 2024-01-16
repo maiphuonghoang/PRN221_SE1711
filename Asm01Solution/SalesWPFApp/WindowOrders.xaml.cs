@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using BusinessObject.Models;
 using System.Windows.Automation.Text;
 using System.Xml.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace SalesWPFApp
 {
@@ -34,10 +35,19 @@ namespace SalesWPFApp
             _orderRepository = orderRepository;
             _orderDetailRepository = orderDetailRepository;
             InitializeComponent();
+            author();
             LoadData();
+        }
+        void author()
+        {
+            if (GlobalValues.IsAdmin == false)
+            {
+                btnProductManagement.IsEnabled = false;
+            }
         }
         private void LoadData()
         {
+
             var orders = new List<OrderDTO>();
             var lsOrder = _orderRepository.GetAllOrders();
             foreach (var item in lsOrder)
@@ -128,7 +138,9 @@ namespace SalesWPFApp
                 if (order != null)
                 {
                     var lsOrderDetail = _orderDetailRepository.GetOrderDetailByOrderId(order.OrderId);
-                    //order.OrderDetails = lsOrderDetail.ToList();
+                    //var lsOrderDetail = new PRN221_Assignment01Context().Orders
+                    //                    .SelectMany(order => order.OrderDetails);
+                    order.OrderDetails = lsOrderDetail.ToList();
                     if (lsOrderDetail.Count() > 0)
                     {
                         _orderDetailRepository.DeleteOrderDetailByOrderId(lsOrderDetail);
@@ -183,6 +195,14 @@ namespace SalesWPFApp
             WindowProducts wp = new WindowProducts(_productRepository, _memberRepository, _orderRepository, _orderDetailRepository);
             wp.Show();
             this.Close();
+        }
+        private PRN221_Assignment01Context _context = new PRN221_Assignment01Context();
+        private void btnReportStatistic_Click(object sender, RoutedEventArgs e)
+        {
+            WindowReportStatistics wrs = new WindowReportStatistics(_productRepository, _memberRepository, _orderRepository, _orderDetailRepository);
+            wrs.Show();
+            this.Close();
+
         }
 
     }
