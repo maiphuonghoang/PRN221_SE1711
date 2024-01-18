@@ -1,0 +1,15 @@
+﻿<Students>
+	<Studentif>
+		<Rollnumber>HE171001</Rollnumber>
+		<StudentName>Nguyen Huu Hoa</StudentName>
+		<Dateofbirth>1984-12-05</Dateofbirth>
+		<Address>No 030-0074321 Hang bun</Address>
+   </Studentif>
+	<Studentif>
+		<Rollnumber>HE171002</Rollnumber>
+		<StudentName>Le Quang Liem</StudentName>
+		<Dateofbirth>1984-03-22</Dateofbirth>
+		<Address>No 030-0074321 Hang bun</Address>
+   </Studentif>
+</Students>
+
