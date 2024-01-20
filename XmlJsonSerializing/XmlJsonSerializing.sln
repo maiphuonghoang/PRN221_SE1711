@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFStudentSE1711", "..\PRN221_SE1711\WPFStudentSE1711\WPFStudent\WPFStudentSE1711.csproj", "{D342EA1E-6F65-459B-ABCB-8E85A1FFB1D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactListJsonXML", "ContactListJsonXML\ContactListJsonXML\ContactListJsonXML.csproj", "{9B9DFD17-F0D2-4114-8F75-A1B02870047B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageProductsJsonXML", "ManageProductsJsonXML\ManageProductsJsonXML\ManageProductsJsonXML.csproj", "{018CA9D8-FDED-407E-B581-EFDFE8546E06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonXmlSerializer", "PersonXmlSerializer\PersonXmlSerializer.csproj", "{7418423C-1E20-4233-9529-4F4F68BABFF8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonChildrenXmlSerializer", "PersonChildrenXmlSerializer\PersonChildrenXmlSerializer.csproj", "{9E18E09C-D1FD-4834-AB8C-8A983FB35F41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeSerialization", "EmployeeSerialization\EmployeeSerialization.csproj", "{CE408D0C-65DB-4F3F-9EDC-29880624EF95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D342EA1E-6F65-459B-ABCB-8E85A1FFB1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D342EA1E-6F65-459B-ABCB-8E85A1FFB1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D342EA1E-6F65-459B-ABCB-8E85A1FFB1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D342EA1E-6F65-459B-ABCB-8E85A1FFB1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B9DFD17-F0D2-4114-8F75-A1B02870047B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9DFD17-F0D2-4114-8F75-A1B02870047B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9DFD17-F0D2-4114-8F75-A1B02870047B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9DFD17-F0D2-4114-8F75-A1B02870047B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018CA9D8-FDED-407E-B581-EFDFE8546E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018CA9D8-FDED-407E-B581-EFDFE8546E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018CA9D8-FDED-407E-B581-EFDFE8546E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018CA9D8-FDED-407E-B581-EFDFE8546E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7418423C-1E20-4233-9529-4F4F68BABFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7418423C-1E20-4233-9529-4F4F68BABFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7418423C-1E20-4233-9529-4F4F68BABFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7418423C-1E20-4233-9529-4F4F68BABFF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E18E09C-D1FD-4834-AB8C-8A983FB35F41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E18E09C-D1FD-4834-AB8C-8A983FB35F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E18E09C-D1FD-4834-AB8C-8A983FB35F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E18E09C-D1FD-4834-AB8C-8A983FB35F41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE408D0C-65DB-4F3F-9EDC-29880624EF95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE408D0C-65DB-4F3F-9EDC-29880624EF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE408D0C-65DB-4F3F-9EDC-29880624EF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE408D0C-65DB-4F3F-9EDC-29880624EF95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D1EB764-283F-4258-9EDF-125DEFC96985}
+	EndGlobalSection
+EndGlobal

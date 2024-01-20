@@ -89,23 +89,22 @@ namespace WPFStudent
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
-            //    var student = GetStudentObject();
-            //    if(student != null)
-            //    {
-            //        student.Id = 0;
-            //        _context.Students.Add(student);
-            //        _context.SaveChanges();
-            //        Load_Data();
-            //        MessageBox.Show("Insert student success " + student.Id +" "+ student.Name, "Add Employee");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Insert student failed", "Add Student");
-            //}
-            btnAddClickV2();
+            try
+            {
+                var student = GetStudentObject();
+                if (student != null)
+                {
+                    student.Id = 0;
+                    _context.Students.Add(student);
+                    _context.SaveChanges();
+                    Load_Data();
+                    MessageBox.Show("Insert student success " + student.Id + " " + student.Name, "Add Employee");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Insert student failed", "Add Student");
+            }
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
@@ -207,6 +206,7 @@ namespace WPFStudent
                 MessageBox.Show(e.Message);
             }
         }
+        //----------------------------------------
 
         private void btnXML_Click(object sender, RoutedEventArgs e)
         {
