@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFMedicineSE1711", "WPFMedicineSE1711\WPFMedicineSE1711.csproj", "{C2DB032F-0963-4F78-BB7C-ADB94A5B1F69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFMedicineSE1711", "WPFMedicineSE1711\WPFMedicineSE1711.csproj", "{C2DB032F-0963-4F78-BB7C-ADB94A5B1F69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GridFormDemo", "..\WPF_XmlJson_SE1711\GridFormDemo\GridFormDemo.csproj", "{E1C49733-352A-472F-BACC-8B6CE4B0D3D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductInfo", "..\ProductInfo\ProductInfo\ProductInfo.csproj", "{171284FF-222C-44B0-B292-A9E85CCBA2CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFStudentSE1711", "..\WPFStudentSE1711\WPFStudent\WPFStudentSE1711.csproj", "{09021142-7924-4B51-B2D5-641A20EFB788}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{C2DB032F-0963-4F78-BB7C-ADB94A5B1F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2DB032F-0963-4F78-BB7C-ADB94A5B1F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2DB032F-0963-4F78-BB7C-ADB94A5B1F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C49733-352A-472F-BACC-8B6CE4B0D3D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C49733-352A-472F-BACC-8B6CE4B0D3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C49733-352A-472F-BACC-8B6CE4B0D3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C49733-352A-472F-BACC-8B6CE4B0D3D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171284FF-222C-44B0-B292-A9E85CCBA2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171284FF-222C-44B0-B292-A9E85CCBA2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171284FF-222C-44B0-B292-A9E85CCBA2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171284FF-222C-44B0-B292-A9E85CCBA2CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09021142-7924-4B51-B2D5-641A20EFB788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09021142-7924-4B51-B2D5-641A20EFB788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09021142-7924-4B51-B2D5-641A20EFB788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09021142-7924-4B51-B2D5-641A20EFB788}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

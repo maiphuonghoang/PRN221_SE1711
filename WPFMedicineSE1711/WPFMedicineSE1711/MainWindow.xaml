@@ -5,57 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFMedicineSE1711"
         mc:Ignorable="d"
-        Title="Medicine Management" Height="808" Width="800">
-    <Grid Margin="0,0,-347,-45">
-        <StackPanel HorizontalAlignment="Left" Margin="10,28,0,239" Width="400">
-            <StackPanel Background="LightBlue" Width="392" Height="515" HorizontalAlignment="Left">
-                <Label  FontSize="20" Foreground="Red" Content="Medicine Management"/>
+        Title="Medicine Management" Height="600" Width="1330"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid HorizontalAlignment="Center" Width="1310">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center" Margin="0,0,0,28" Width="214">
+            <StackPanel Background="LightBlue" Width="Auto" Height="515" HorizontalAlignment="Left">
+                <Label FontSize="20" Foreground="Red" Content="Medicine Management"/>
                 <Label Content="Medicine ID"/>
-                <TextBox Name="txtMedicineID"  Height="25"  Text="{Binding Path=MedicineID}"
-                      />
+                <TextBox Name="txtMedicineID" Height="25" Text="{Binding Path=MedicineID}" />
                 <Label Content="Group"/>
                 <ComboBox Name="cbGroup" DisplayMemberPath="GroupName" SelectedValuePath="GroupId" />
                 <Label Content="Supplier"/>
                 <ComboBox Name="cbSupplier" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierId" />
                 <Label Content="Medicine Name"/>
-                <TextBox Name="txtMedicineName"  Height="25" Text="{Binding Path=MedicineName}"
-/>
+                <TextBox Name="txtMedicineName" Height="25" Text="{Binding Path=MedicineName}" />
                 <Label Content="Price"/>
-                <TextBox Name="txtPrice"  Height="25" Text="{Binding Path=Price}"/>
+                <TextBox Name="txtPrice" Height="25" Text="{Binding Path=Price}" />
                 <Label Content="Amount"/>
-                <TextBox Name="txtAmount"  Height="25" Text="{Binding Path=Amount}"/>
+                <TextBox Name="txtAmount" Height="25" Text="{Binding Path=Amount}" />
                 <Label Name="lblExpiriDate" Content="ExpiriDate"/>
-                <DatePicker Name="dpExpiriDate" Text="{Binding Path=ExpiriDate}"
-                      />
+                <DatePicker Name="dpExpiriDate" Text="{Binding Path=ExpiriDate}" />
                 <Label Name="lblPreserve" Content="Preserve"/>
-                <TextBox Name="txtPreserve"  Height="25" Text="{Binding Path=Preserve}"
-                      />
+                <TextBox Name="txtPreserve" Height="25" Text="{Binding Path=Preserve}" />
                 <Label Content="UserManual"/>
-                <TextBox Name="txtUserManual"  Height="53" Text="{Binding Path=UserManual}" Width="390"
-                      />
+                <TextBox x:Name="txtUserManual" Height="81" Text="{Binding UserManual}" Width="Auto" />
             </StackPanel>
         </StackPanel>
-        <DataGrid Name="dgMedicine" AutoGenerateColumns="False" SelectionChanged="DgMedicine_SelectionChanged" Margin="2,551,-2,0">
+        <DataGrid Name="dgMedicine" AutoGenerateColumns="False" SelectionChanged="DgMedicine_SelectionChanged" Margin="0,70,15,28" Grid.Column="1">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Medicine ID" Binding="{Binding MedicineId}" Width="90"/>
-                <DataGridTextColumn Header="Group Name" Binding="{Binding GroupName}" Width="200"/>
+                <DataGridTextColumn Header="Medicine ID" Binding="{Binding MedicineId}" Width="60"/>
+                <DataGridTextColumn Header="Group Name" Binding="{Binding GroupName}" Width="120"/>
                 <DataGridTextColumn Header="Supplier Name" Binding="{Binding SupplierName}" Width="100"/>
-                <DataGridTextColumn Header="Medicine Name" Binding="{Binding MedicineName}" Width="100"/>
-                <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="100"/>
-                <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="100"/>
+                <DataGridTextColumn Header="Medicine Name" Binding="{Binding MedicineName}" Width="120"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="60"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="60"/>
                 <DataGridTextColumn Header="Expiry Date" Binding="{Binding ExpiriDate}" Width="150"/>
-                <DataGridTextColumn Header="Preserve" Binding="{Binding Preserve}" Width="100"/>
-                <DataGridTextColumn Header="User Manual" Binding="{Binding UserManual}" Width="200"/>
+                <DataGridTextColumn Header="Preserve" Binding="{Binding Preserve}" Width="60"/>
+                <DataGridTextColumn Header="User Manual" Binding="{Binding UserManual}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Width="112" RenderTransformOrigin="0,10" Margin="416,28,619,397">
+        <StackPanel Orientation="Horizontal" RenderTransformOrigin="0,10" Margin="0,10,10,0" Grid.Column="1" VerticalAlignment="Top" Height="55">
             <Button x:Name="btnRefesh" Margin="10" Width="80" Height="35" Click="btnRefesh_Click" Content="Refesh"/>
             <Button x:Name="btnAdd" Margin="10" Width="80" Height="35" Click="btnAdd_Click" Content="Add"/>
             <Button x:Name="btnEdit" Margin="10" Width="80" Height="35" Click="btnEdit_Click" Content="Edit"/>
             <Button x:Name="btnDelete" Margin="10" Width="80" Height="35" Click="btnDelete_Click" Content="Delete"/>
             <Button x:Name="btnXml" Margin="10" Width="80" Height="35" Click="btnXml_Click" Content="Load XML"/>
             <Button x:Name="btnJson" Margin="10" Width="80" Height="35" Click="btnJson_Click" Content="Load Json"/>
-            <Button x:Name="btnExpridate" Margin="10" Width="80" Height="35" Click="btnExpridate_Click" Content="Check Expridate"/>
+            <Button x:Name="btnExpridate" Margin="10" Width="95" Height="35" Click="btnExpridate_Click" Content="Check Expridate"/>
         </StackPanel>
     </Grid>
 </Window>

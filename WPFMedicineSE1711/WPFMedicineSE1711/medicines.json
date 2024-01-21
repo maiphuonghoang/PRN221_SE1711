@@ -1,0 +1,38 @@
+﻿{
+  "Medicines": [
+    {
+      "MedicineId": "O1",
+      "GroupId": 1,
+      "SupplierId": 2,
+      "MedicineName": "Nghệ An 1",
+      "Price": 6000,
+      "Amount": 20000,
+      "ExpiriDate": "2004-01-01T00:00:00",
+      "Preserve": "no",
+      "UserManual": "abc xyz"
+    },
+    {
+      "MedicineId": "O2",
+      "GroupId": 4,
+      "SupplierId": 2,
+      "MedicineName": "Nghệ An 2",
+      "Price": 6000,
+      "Amount": 20000,
+      "ExpiriDate": "2004-01-01T00:00:00",
+      "Preserve": "no",
+      "UserManual": "abc xyz"
+    },
+    {
+      "MedicineId": "C1",
+      "GroupId": 2,
+      "SupplierId": 2,
+      "MedicineName": "Nghệ An 3",
+      "Price": 6000,
+      "Amount": 20000,
+      "ExpiriDate": "2004-01-01T00:00:00",
+      "Preserve": "no",
+      "UserManual": "abc xyz"
+    }
+  ]
+
+}
