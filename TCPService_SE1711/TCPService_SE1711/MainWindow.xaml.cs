@@ -50,7 +50,7 @@ namespace TCPService_SE1711
                     txtContent.Text = $"waiting for client connection ... ";
 
                 });
-                while(true)
+                while (true)
                 {
                     TcpClient client = server.AcceptTcpClient();
                     Dispatcher.Invoke(() =>
@@ -62,7 +62,8 @@ namespace TCPService_SE1711
                     Thread newThread = new Thread(new ParameterizedThreadStart(ProcessClient));
                     newThread.Start(client);
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -79,9 +80,15 @@ namespace TCPService_SE1711
                 while ((count = stream.Read(bytes, 0, bytes.Length)) > 0)
                 {
                     data = Encoding.ASCII.GetString(bytes, 0, count);
+                    // Process the data sent by the client.
+                    data = $"{data.ToUpper()}";
+                    byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
+                    // Send back a response.
+                    stream.Write(msg, 0, msg.Length);
+                    //MessageBox.Show("ProcessClient" + $"{DateTime.Now:t}" + data);
                     Dispatcher.Invoke(() =>
                     {
-                        txtContent.Text = txtContent.Text + "\r\n" + data;
+                        txtContent.Text = $"{DateTime.Now:t}" + txtContent.Text + "\r\n" + data;
                     });
                 }
                 client.Close();
@@ -92,7 +99,7 @@ namespace TCPService_SE1711
             }
         }
 
- 
+
 
 
     }

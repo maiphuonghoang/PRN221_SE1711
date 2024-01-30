@@ -91,6 +91,7 @@ namespace DirectorInfo
                 string host = "127.0.0.1";
                 int port = 5000;
                 int bytes;
+                string responseData;
                 try
                 {
                     TcpClient tcpClient = new TcpClient(host, port);
@@ -98,9 +99,15 @@ namespace DirectorInfo
                     while (true)
                     {
                         Byte[] data = Encoding.ASCII.GetBytes(jsonData);
-                        MessageBox.Show(data + "");
                         stream = tcpClient.GetStream();
                         stream.Write(data, 0, data.Length);
+
+                        // Nhận phản hồi từ TcpServer.
+                        Byte[] data2 = new Byte[256];
+                        // Read the first batch of the TcpServer response bytes.
+                        bytes = stream.Read(data2, 0, data2.Length);
+                        responseData = System.Text.Encoding.ASCII.GetString(data2, 0, bytes);
+                        MessageBox.Show("response from server" + $"{DateTime.Now:t}" + responseData);
                         break;
 
                     }

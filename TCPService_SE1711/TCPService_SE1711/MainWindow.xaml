@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel>
             <Button x:Name="btnListen" Content="Listen Client" Click="btnListen_Click"></Button>
-            <TextBlock x:Name="txtContent" Height="130"></TextBlock>
+            <TextBlock x:Name="txtContent" Height="404"></TextBlock>
         </StackPanel>
     </Grid>
 </Window>
