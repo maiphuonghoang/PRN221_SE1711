@@ -1,0 +1,27 @@
+﻿<Window x:Class="ServerPhone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServerPhone"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,54">
+        <StackPanel>
+            <Button x:Name="btnListen" Content="Listen Client" Click="btnListen_Click"></Button>
+            <TextBlock x:Name="txtContent" Height="1000"></TextBlock>
+        </StackPanel>
+        <ListView Margin="10,64,10,10" Name="lsPhone">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="PhoneID" Width="50" DisplayMemberBinding="{Binding Path=Id}" />
+                    <GridViewColumn Header="Branch" Width="120" DisplayMemberBinding="{Binding Path=Branch}" />
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Path=Name}" />
+                    <GridViewColumn Header="DateofManufacture" Width="120" DisplayMemberBinding="{Binding Path=DateofManufacture, StringFormat='dd/MM/yyyy'}" />
+                    <GridViewColumn Header="StopManufacture" Width="130" DisplayMemberBinding="{Binding Path=StopManufacture}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Change database" Name="btnChangeDatabase" HorizontalAlignment="Left" Margin="650,39,0,0" VerticalAlignment="Top" Width="120" Click="btnChangeDatabase_Click" />
+    </Grid>
+</Window>

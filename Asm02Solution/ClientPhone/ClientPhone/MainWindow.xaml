@@ -1,0 +1,45 @@
+﻿<Window x:Class="ClientPhone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientPhone"
+        mc:Ignorable="d"
+        Title="ClientPhone" Height="420" Width="900">
+    <Grid Margin="0,0,73,0">
+        <Label Content="Phone's Info" HorizontalAlignment="Left" Margin="40,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.619,-1.212" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="40,71,0,0" VerticalAlignment="Top"/>
+        <Label Content="Branch" HorizontalAlignment="Left" Margin="44,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="DateofManufacture" HorizontalAlignment="Left" Margin="40,113,0,0" VerticalAlignment="Top"/>
+        <Label Content="StopManufacture" HorizontalAlignment="Left" Margin="40,207,0,0" VerticalAlignment="Top"/>
+
+        <TextBox HorizontalAlignment="Left" Name="txtId" Margin="159,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                 IsReadOnly="True" Text="{Binding Id}" DataContext="{Binding SelectedItem, ElementName=lsPhone}"/>
+        <TextBox HorizontalAlignment="Left" Name="txtName" Margin="159,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                 Text="{Binding Name}" DataContext="{Binding SelectedItem, ElementName=lsPhone}"
+                 />
+        <DatePicker HorizontalAlignment="Left" Name="dpDateofManufacture" Margin="161,115,0,0" VerticalAlignment="Top"
+                    Text="{Binding DateofManufacture}" DataContext="{Binding SelectedItem, ElementName=lsPhone}"
+                    />
+        <TextBox HorizontalAlignment="Left" Name="txtBranch" Margin="161,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                 Text="{Binding Branch}" DataContext="{Binding SelectedItem, ElementName=lsPhone}"/>
+        <CheckBox Name="cbStopManufacture" HorizontalAlignment="Left" Margin="161,212,0,0" VerticalAlignment="Top"
+                  IsChecked="True"
+                  />
+        <Button Content="Load Data" x:Name="btnLoadData" HorizontalAlignment="Left" Margin="24,316,0,0" VerticalAlignment="Top" Width="120" Click="btnLoadData_Click"/>
+        <Button Content="Add To List" Name="btnAddToList" HorizontalAlignment="Left" Margin="161,316,0,0" VerticalAlignment="Top" Width="120" Click="btnAddToList_Click"/>
+        <Button Content="Send To Server" Name="btnSendToServer" HorizontalAlignment="Center" Margin="0,316,0,0" VerticalAlignment="Top" Width="120" Click="btnSendToServer_Click" />
+        <ListView Margin="304,55,-53,155" Name="lsPhone" PreviewMouseLeftButtonUp="listView_Click">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="PhoneID" Width="50" DisplayMemberBinding="{Binding Path=Id}"/>
+                    <GridViewColumn Header="Branch" Width="120" DisplayMemberBinding="{Binding Path=Branch}"/>
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="DateofManufacture" Width="120" DisplayMemberBinding="{Binding Path=DateofManufacture, StringFormat='dd/MM/yyyy'}"/>
+                    <GridViewColumn Header="StopManufacture" Width="130" DisplayMemberBinding="{Binding Path=StopManufactureString}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
