@@ -22,6 +22,5 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Change database" Name="btnChangeDatabase" HorizontalAlignment="Left" Margin="650,39,0,0" VerticalAlignment="Top" Width="120" Click="btnChangeDatabase_Click" />
     </Grid>
 </Window>

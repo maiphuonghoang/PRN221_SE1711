@@ -24,10 +24,12 @@ namespace ClientPhone
     public partial class MainWindow : Window
     {
         private PRN221_SE1711_Assignment2Context _context = new PRN221_SE1711_Assignment2Context();
+
         public MainWindow()
         {
             InitializeComponent();
             LoadData();
+
         }
         public void LoadData()
         {
@@ -50,17 +52,18 @@ namespace ClientPhone
         {
             LoadData();
         }
-        public TblPhone GetTblPhoneObject()
+        public TblPhoneDTO GetTblPhoneObjectDTO()
         {
             try
             {
-                return new TblPhone
+                return new TblPhoneDTO
                 {
                     Id = string.IsNullOrEmpty(txtId.Text) ? 0 : int.Parse(txtId.Text),
                     Name = txtName.Text,
                     Branch = txtBranch.Text,
                     DateofManufacture = dpDateofManufacture.SelectedDate,
                     StopManufacture = cbStopManufacture.IsChecked == true ? true : false,
+                    StopManufactureString = cbStopManufacture.IsChecked == true ? "Yes" : "No",
                 };
 
             }
@@ -74,19 +77,15 @@ namespace ClientPhone
         {
             try
             {
-                var phone = GetTblPhoneObject();
-                if (phone != null)
-                {
-                    phone.Id = 0;
-                    _context.TblPhones.Add(phone);
-                    _context.SaveChanges();
-                    LoadData();
-                    MessageBox.Show("Insert TblPhone success " + phone.Id + " " + phone.Name, "Add TblPhone");
-                }
+                var phone = GetTblPhoneObjectDTO();
+                tempPhoneList.Add(phone);
+                lsPhone.ItemsSource = null;
+                lsPhone.ItemsSource = tempPhoneList;
+                MessageBox.Show("Insert success " + phone.Id + " " + phone.Name, "Add TblPhone");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Insert TblPhone failed", "Add TblPhone");
+                MessageBox.Show("Insert failed", "Add TblPhone");
             }
         }
         private List<TblPhoneDTO> tempPhoneList = new List<TblPhoneDTO>();
@@ -136,3 +135,4 @@ namespace ClientPhone
         }
     }
 }
+

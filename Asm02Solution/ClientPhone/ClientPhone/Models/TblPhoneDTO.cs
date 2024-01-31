@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClientPhone.Models
 {
-    internal class TblPhoneDTO
+    public class TblPhoneDTO
     {
         public int Id { get; set; }
         public string? Branch { get; set; }

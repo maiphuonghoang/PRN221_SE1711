@@ -26,6 +26,8 @@ namespace ServerPhone
     /// </summary>
     public partial class MainWindow : Window
     {
+        private PRN221_SE1711_Assignment2Context _context = new PRN221_SE1711_Assignment2Context();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -113,6 +115,7 @@ namespace ServerPhone
 
                 // Process the data sent by the client.
                 phones = JsonSerializer.Deserialize<List<TblPhone>>(data);
+                processDataToDB();
 
                 Dispatcher.Invoke(() =>
                 {
@@ -126,11 +129,46 @@ namespace ServerPhone
             }
         }
 
-        private void btnChangeDatabase_Click(object sender, RoutedEventArgs e)
+        private void processDataToDB()
         {
             //insert dữ liệu nếu nó chưa có trong database hoặc edit nếu đã tồn tại.
-            //Xoá nếu chỉ có trường ID còn lại bị null và cập nhật 1 datagrid hoặc listview.
+            //Xoá nếu chỉ có trường ID còn lại bị null 
+            foreach (var phone in phones)
+            {
+                var existingPhone = _context.TblPhones.FirstOrDefault(p => p.Id == phone.Id);
+                if (existingPhone != null)
+                {
+                    if (phone.Name.Trim() == "" && phone.Branch.Trim() == "" && phone.DateofManufacture == null && phone.StopManufacture == false)
+                    {
+                        //delete 
+                        _context.Remove(existingPhone);
+                        _context.SaveChanges();
+                    }
+                    else
+                    {
+                        //update 
+                        existingPhone.Id = existingPhone.Id;
+                        existingPhone.Branch = phone.Branch;
+                        existingPhone.Name = phone.Name;
+                        existingPhone.DateofManufacture = phone.DateofManufacture;
+                        existingPhone.StopManufacture = phone.StopManufacture;
+                        _context.Update(existingPhone);
+                        _context.SaveChanges();
+                    }
+                }
+                else
+                {
+                    //insert 
+                    if (!(phone.Name.Trim() == "" && phone.Branch.Trim() == "" && phone.DateofManufacture == null && phone.StopManufacture == false))
+                    {
+                        phone.Id = 0;
+                        _context.Add(phone);
+                        _context.SaveChanges();
+                    }
+                }
 
+            }
+            phones = _context.TblPhones.ToList();
 
         }
     }
