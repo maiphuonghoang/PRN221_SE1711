@@ -43,13 +43,7 @@ CREATE TABLE Employee
 )
 ALTER TABLE [Group] ADD CONSTRAINT FK_Group_Employee FOREIGN KEY(buId)
 REFERENCES Employee (employeeId)
-
-CREATE TABLE Participate
-(
-	groupCode varchar(10) NOT NULL,
-	employeeId varchar(50) NOT NULL,
-	CONSTRAINT PK_Participate PRIMARY KEY (groupCode, employeeId)
-)
+ALTER TABLE [Group] DROP CONSTRAINT FK_Group_Employee 
 
 CREATE TABLE Job (
     jobCode VARCHAR(10) PRIMARY KEY,
@@ -74,6 +68,32 @@ CREATE TABLE Salary
 	PRIMARY KEY (employeeId, jobRankId)
 );
 
+CREATE TABLE StandardTime
+(
+    standardTimeId INT PRIMARY KEY,
+    morningStartTime time,
+    morningEndTime time,
+    afternoonStartTime time,
+    afternoonEndTime time,
+);
+
+CREATE TABLE Participate
+(
+	groupCode varchar(10) NOT NULL REFERENCES [Group] (groupCode),
+	employeeId varchar(50) NOT NULL REFERENCES Employee (employeeId),
+	standardTimeId int NOT NULL REFERENCES StandardTime (standardTimeId),
+	CONSTRAINT PK_Participate PRIMARY KEY (groupCode, employeeId)
+)
+
+CREATE TABLE Working
+(
+    workingId INT PRIMARY KEY IDENTITY(1,1),
+	employeeId varchar(50) NOT NULL REFERENCES Employee (employeeId),
+	dateWorking date,
+	firstEntryTime time,
+	lastExistTime time,
+);
+
 SELECT * FROM Employee;
 SELECT * FROM AccountRole;
 SELECT * FROM Account;
@@ -85,19 +105,24 @@ SELECT * FROM Job
 SELECT * FROM Package
 SELECT * FROM JobRank
 SELECT * FROM Salary
+SELECT * FROM StandardTime
+SELECT * FROM Working 
 
 DELETE FROM Participate
 DELETE FROM Job
 DELETE FROM Package
 DELETE FROM JobRank
 DELETE FROM Salary
+DELETE FROM StandardTime
 /*
-DROP TABLE [Group]
+DROP TABLE Working
 DROP TABLE Participate
+DROP TABLE Salary
+DROP TABLE [Group]
 DROP TABLE Job
 DROP TABLE Package
 DROP TABLE JobRank
-DROP TABLE Salary
+DROP TABLE StandardTime
 */
 
 SELECT employeeId FROM Participate
@@ -107,12 +132,36 @@ HAVING COUNT(DISTINCT groupCode) > 1;
 
 SELECT * FROM [Group] g JOIN Participate p ON g.groupCode = p.groupCode WHERE g.groupCode = 'IVS';
 
-SELECT e.employeeId, e.employeeName, g.groupCode, j.jobCode, j.jobName, jr.jobRank, jr.packageCode, pk.packageSalary 
-FROM [Group] g JOIN Participate p ON g.groupCode = p.groupCode 
+SELECT e.employeeId, e.employeeName, g.groupCode, 
+j.jobCode, j.jobName, 
+jr.jobRank, jr.packageCode, 
+pk.packageSalary, 
+st.standardTimeId, st.morningStartTime, st.afternoonEndTime
+FROM [Group] g 
+JOIN Participate p ON g.groupCode = p.groupCode 
 JOIN Employee e ON e.employeeId = p.employeeId 
 JOIN Salary s ON s.employeeId = e.employeeId
 JOIN JobRank jr ON jr.jobRankId = s.jobRankId
 JOIN Job j ON j.jobCode = jr.jobCode
 JOIN Package pk ON pk.packageCode = jr.packageCode
-WHERE g.groupCode IN ('IVS')
+JOIN StandardTime st ON st.standardTimeId = p.standardTimeId 
+WHERE g.groupCode IN ('GHC')
 -- WHERE j.jobCode IN ('SPMA', 'BEDEVE')
+
+
+SELECT *, CONVERT(TIME, CONCAT(
+FORMAT(DATEDIFF(HOUR, w.firstEntryTime, w.lastExistTime), '00'),':', 
+FORMAT(DATEDIFF(MINUTE, w.firstEntryTime, w.lastExistTime)%60, '00'),':', 
+FORMAT(DATEDIFF(SECOND, w.firstEntryTime, w.lastExistTime)%60, '00')
+)) AS workedTime  FROM Working w
+WHERE  DATENAME(WEEKDAY, w.dateWorking) NOT IN ('Saturday', 'Sunday')
+AND w.employeeId = 'thangnv75' AND MONTH(w.dateWorking) = 1
+
+SELECT
+st.*,
+w.*
+from Participate p
+JOIN Employee e ON e.employeeId = p.employeeId 
+JOIN StandardTime st ON st.standardTimeId = p.standardTimeId 
+JOIN Working w ON w.employeeId = e.employeeId
+WHERE w.firstEntryTime <  st.afternoonEndTime

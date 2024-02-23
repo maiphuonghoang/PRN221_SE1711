@@ -1,172 +1,10 @@
+USE PRN221_FPTCompanyMW; 
+
 INSERT INTO [Group] (groupCode, buId) VALUES ('GHC', 'thangnv75');
 INSERT INTO [Group] (groupCode, buId) VALUES ('EBS', 'anhnh88');
 INSERT INTO [Group] (groupCode, buId) VALUES ('GST', 'sonnt5');
 INSERT INTO [Group] (groupCode, buId) VALUES ('IVS', 'tientd17');
 INSERT INTO [Group] (groupCode, buId) VALUES ('FCJ', 'trungnt');
-
-
---15 
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE150057', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE151095', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE153206', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE160694', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE161357', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE161795', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE163146', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE164035', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170051', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170245', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170422', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170428', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170444', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170533', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170842', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170863', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170907', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE170996', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE171071', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE171073', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE171162', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE171442', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE171482', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE171578', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE171687', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE171851', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE171865', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE176182', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE176697', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('HE176751', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('SE03520', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('SE04495', 'GHC');
-INSERT INTO Participate (employeeId, groupCode) VALUES ('thangnv75', 'GHC');
-
-
-
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'DE170703')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE153678')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE161700')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE161706')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE161755')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE163415')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE163635')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE164044')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE170072')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE170180')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE170201')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE170203')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE170420')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE170595')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE171098')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE171319')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE171320')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE171416')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE171702')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE171937')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE172032')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE173037')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE173046')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE176640')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE181829')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HE181879')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HS170024')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HS170726')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HS173175')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('EBS', 'HS176033')
-INSERT INTO Participate (employeeId, groupCode) VALUES ('anhnh88', 'EBS');
-
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE161232')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE161643')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE163665')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE170123')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE170268')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE170302')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE170314')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE170317')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE170617')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE171209')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE171310')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE171883')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE172207')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE172366')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE172533')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE172693')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE172802')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE173328')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE173373')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE173476')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE173489')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE176275')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE176282')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE176285')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE176346')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE176360')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE176603')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE176686')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('FCJ', 'HE176834')
-INSERT INTO Participate (employeeId, groupCode) VALUES ('trungnt', 'FCJ');
-
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE161285')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE161816')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE163067')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170011')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170167')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170273')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170301')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170415')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170607')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170622')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170631')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170724')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170960')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE170999')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE171312')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE171411')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE171540')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE171628')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE172037')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE172748')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE172838')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE172848')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE173248')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE173588')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE176077')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE176087')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE176169')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE176420')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('GST', 'HE176882')
-INSERT INTO Participate (employeeId, groupCode) VALUES ('sonnt5', 'GST');
-
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE150732')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE150998')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE161224')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE161597')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE163629')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE170089')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE170685')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE170793')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE171358')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE171394')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE171421')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE171552')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE171908')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE171915')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE171916')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE171990')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE172180')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE172280')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE172313')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE172435')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE172527')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE172538')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE172702')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE172737')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE173401')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE173457')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE176211')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE176279')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE176633')
-INSERT INTO Participate (groupCode, employeeId) VALUES ('IVS', 'HE176747')
-INSERT INTO Participate (employeeId, groupCode) VALUES ('tientd17', 'IVS');
 
 INSERT INTO Job (jobCode, jobName)
 VALUES
@@ -449,3 +287,364 @@ INSERT INTO Salary (employeeId, jobRankId) VALUES
 	('HE176279', '48'),
 	('HE176633', '40'),
 	('HE176747', '43');
+
+INSERT INTO StandardTime (standardTimeId, morningStartTime, morningEndTime, afternoonStartTime, afternoonEndTime)
+VALUES
+(1, '08:00:00 AM', '12:00:00 PM', '13:30:00 PM', '17:00:00 PM'),
+(2, '08:30:00 AM', '12:00:00 PM', '13:30:00 PM', '17:30:00 PM'),
+(3, '09:00:00 AM', '12:00:00 PM', '13:30:00 PM', '18:00:00 PM')
+
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE150057', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE151095', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE153206', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE160694', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE161357', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE161795', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE163146', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE164035', 'GHC', 2);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170051', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170245', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170422', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170428', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170444', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170533', 'GHC', 2);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170842', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170863', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170907', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE170996', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE171071', 'GHC', 2);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE171073', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE171162', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE171442', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE171482', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE171578', 'GHC', 2);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE171687', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE171851', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE171865', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE176182', 'GHC', 3);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE176697', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('HE176751', 'GHC', 3);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('SE03520', 'GHC', 3);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('SE04495', 'GHC', 1);
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('thangnv75', 'GHC', 1);
+
+
+
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'DE170703', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE153678', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE161700', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE161706', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE161755', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE163415', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE163635', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE164044', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE170072', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE170180', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE170201', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE170203', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE170420', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE170595', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE171098', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE171319', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE171320', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE171416', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE171702', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE171937', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE172032', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE173037', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE173046', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE176640', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE181829', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HE181879', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HS170024', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HS170726', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HS173175', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('EBS', 'HS176033', 1)
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('anhnh88', 'EBS', 1);
+
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE161232', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE161643', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE163665', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE170123', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE170268', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE170302', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE170314', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE170317', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE170617', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE171209', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE171310', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE171883', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE172207', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE172366', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE172533', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE172693', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE172802', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE173328', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE173373', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE173476', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE173489', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE176275', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE176282', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE176285', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE176346', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE176360', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE176603', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE176686', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('FCJ', 'HE176834', 1)
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('trungnt', 'FCJ', 1);
+
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE161285', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE161816', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE163067', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170011', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170167', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170273', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170301', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170415', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170607', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170622', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170631', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170724', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170960', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE170999', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE171312', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE171411', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE171540', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE171628', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE172037', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE172748', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE172838', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE172848', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE173248', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE173588', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE176077', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE176087', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE176169', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE176420', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('GST', 'HE176882', 1)
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('sonnt5', 'GST', 1);
+
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE150732', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE150998', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE161224', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE161597', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE163629', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE170089', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE170685', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE170793', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE171358', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE171394', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE171421', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE171552', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE171908', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE171915', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE171916', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE171990', 2)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE172180', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE172280', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE172313', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE172435', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE172527', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE172538', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE172702', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE172737', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE173457', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE176211', 1)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE176279', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE176633', 3)
+INSERT INTO Participate (groupCode, employeeId, standardTimeId) VALUES ('IVS', 'HE176747', 1)
+INSERT INTO Participate (employeeId, groupCode, standardTimeId) VALUES ('tientd17', 'IVS', 1);
+
+
+SET DATEFORMAT DMY
+
+INSERT INTO Working (employeeId, dateWorking , firstEntryTime, lastExistTime) VALUES
+	('HE150057', '01/01/2024', '07:45:00', '17:00:00'),
+	('HE150057', '02/01/2024', '07:50:00', '17:01:01'),
+	('HE150057', '03/01/2024', '07:55:00', '17:02:02'),
+	('HE150057', '04/01/2024', '08:00:00', '17:03:03'),
+	('HE150057', '05/01/2024', '08:00:00', '17:04:04'),
+	('HE150057', '08/01/2024', '08:00:00', '17:07:07'),
+	('HE150057', '09/01/2024', '08:00:00', '17:08:08'),
+	('HE150057', '10/01/2024', '08:00:00', '17:09:09'),
+	('HE150057', '11/01/2024', '08:00:00', '17:10:10'),
+	('HE150057', '12/01/2024', '08:00:00', '17:11:11'),
+	('HE150057', '15/01/2024', '08:00:00', '17:14:14'),
+	('HE150057', '16/01/2024', '07:45:00', '17:15:15'),
+	('HE150057', '17/01/2024', '07:50:00', '17:16:16'),
+	('HE150057', '18/01/2024', '07:55:00', '17:17:17'),
+	('HE150057', '19/01/2024', '08:00:00', '17:18:18'),
+	('HE150057', '22/01/2024', '08:00:00', '17:21:21'),
+	('HE150057', '23/01/2024', '08:00:00', '17:22:22'),
+	('HE150057', '24/01/2024', '08:00:00', '17:23:23'),
+	('HE150057', '25/01/2024', '08:00:00', '17:24:24'),
+	('HE150057', '26/01/2024', '08:00:00', '17:25:25'),
+	('HE150057', '29/01/2024', '08:00:00', '17:28:28'),
+	('HE150057', '30/01/2024', '08:00:00', '17:29:29'),
+	('HE150057', '31/01/2024', '08:00:00', '17:30:30'),
+	('HE150057', '01/02/2024', '08:00:00', '17:00:00'),
+	('HE150057', '02/02/2024', '08:00:00', '17:01:01'),
+	('HE150057', '05/02/2024', '08:00:00', '17:04:04'),
+	('HE150057', '06/02/2024', '08:00:00', '17:05:05'),
+	('HE150057', '07/02/2024', '07:45:00', '17:06:06'),
+	('HE150057', '08/02/2024', '07:50:00', '17:07:07'),
+	('HE150057', '09/02/2024', '07:55:00', '17:08:08'),
+	('HE150057', '12/02/2024', '08:00:00', '17:11:11'),
+	('HE150057', '13/02/2024', '08:00:00', '17:12:12'),
+	('HE150057', '14/02/2024', '08:00:00', '17:13:13'),
+	('HE150057', '15/02/2024', '08:00:00', '17:14:14'),
+	('HE150057', '16/02/2024', '08:00:00', '17:15:15'),
+	('HE150057', '19/02/2024', '08:00:00', '17:18:18'),
+	('HE150057', '20/02/2024', '08:00:00', '17:19:19'),
+	('HE150057', '21/02/2024', '07:48:00', '17:20:20'),
+	('HE150057', '22/02/2024', '07:52:00', '17:21:21'),
+	('HE150057', '23/02/2024', '07:59:00', '17:22:22'),
+	('HE150057', '26/02/2024', '07:59:05', '17:25:25'),
+	('HE150057', '27/02/2024', '07:48:03', '17:26:26'),
+	('HE150057', '28/02/2024', '07:52:00', '17:27:27'),
+	('HE150057', '29/02/2024', '07:59:00', '17:28:28');
+INSERT INTO Working (employeeId, dateWorking , firstEntryTime, lastExistTime) VALUES
+	('HE151095', '01/01/2024', '07:45:00', '17:00:00'),
+	('HE151095', '02/01/2024', '07:50:00', '17:01:01'),
+	('HE151095', '03/01/2024', '07:55:00', '17:02:02'),
+	('HE151095', '04/01/2024', '08:00:00', '17:03:03'),
+	('HE151095', '05/01/2024', '08:00:00', '17:04:04'),
+	('HE151095', '08/01/2024', '08:00:00', '17:07:07'),
+	('HE151095', '09/01/2024', '08:00:00', '17:08:08'),
+	('HE151095', '10/01/2024', '08:00:00', '17:09:09'),
+	('HE151095', '11/01/2024', '08:00:00', '17:10:10'),
+	('HE151095', '12/01/2024', '08:00:00', '17:11:11'),
+	('HE151095', '15/01/2024', '08:00:00', '17:14:14'),
+	('HE151095', '16/01/2024', '07:45:00', '17:15:15'),
+	('HE151095', '17/01/2024', '07:50:00', '17:16:16'),
+	('HE151095', '18/01/2024', '07:55:00', '17:17:17'),
+	('HE151095', '19/01/2024', '08:00:00', '17:18:18'),
+	('HE151095', '22/01/2024', '08:00:00', '17:21:21'),
+	('HE151095', '23/01/2024', '08:00:00', '17:22:22'),
+	('HE151095', '24/01/2024', '08:00:00', '17:23:23'),
+	('HE151095', '25/01/2024', '08:00:10', '17:24:24'),
+	('HE151095', '26/01/2024', '08:01:10', '17:25:25'),
+	('HE151095', '29/01/2024', '09:00:10', '17:28:28'),
+	('HE151095', '30/01/2024', '10:00:00', '17:29:29'),
+	('HE151095', '31/01/2024', '08:00:10', '16:30:00'),
+	('HE151095', '01/02/2024', '08:00:10', '16:30:00'),
+	('HE151095', '02/02/2024', '08:00:00', '16:30:00'),
+	('HE151095', '05/02/2024', '08:00:00', '16:30:00'),
+	('HE151095', '06/02/2024', '08:00:00', '17:05:05'),
+	('HE151095', '07/02/2024', '07:45:00', '17:06:06'),
+	('HE151095', '08/02/2024', '07:50:00', '17:07:07'),
+	('HE151095', '09/02/2024', '07:55:00', '17:08:08'),
+	('HE151095', '12/02/2024', '08:00:00', '12:00:00'),
+	('HE151095', '13/02/2024', '08:00:00', '11:00:00'),
+	('HE151095', '14/02/2024', '08:00:00', '12:30:00'),
+	('HE151095', '15/02/2024', '08:10:00', '12:00:00'),
+	('HE151095', '16/02/2024', '08:00:00', '10:00:00'),
+	('HE151095', '19/02/2024', '08:00:00', '17:18:18'),
+	('HE151095', '20/02/2024', '08:00:00', '17:19:19'),
+	('HE151095', '21/02/2024', '07:48:00', '17:20:20'),
+	('HE151095', '22/02/2024', '15:00:00', '17:00:00'),
+	('HE151095', '23/02/2024', '13:30:00', '16:40:00'),
+	('HE151095', '26/02/2024', '12:30:00', '17:00:00'),
+	('HE151095', '27/02/2024', '13:30:00', '17:00:00'),
+	('HE151095', '28/02/2024', '13:40:00', '17:00:00'),
+	('HE151095', '29/02/2024', '13:40:00', '16:40:00');
+INSERT INTO Working (employeeId, dateWorking , firstEntryTime, lastExistTime) VALUES
+	('thangnv75', '01/01/2024', '07:45:00', '17:00:00'),
+	('thangnv75', '02/01/2024', '07:50:00', '17:01:01'),
+	('thangnv75', '03/01/2024', '07:55:00', '17:02:02'),
+	('thangnv75', '04/01/2024', '08:00:00', '17:03:03'),
+	('thangnv75', '05/01/2024', '08:00:00', '17:04:04'),
+	('thangnv75', '06/01/2024', '08:00:00', '17:05:05'),
+	('thangnv75', '07/01/2024', '08:00:00', '17:06:06'),
+	('thangnv75', '08/01/2024', '08:00:00', '17:07:07'),
+	('thangnv75', '09/01/2024', '08:00:00', '17:08:08'),
+	('thangnv75', '10/01/2024', '08:00:00', '17:09:09'),
+	('thangnv75', '11/01/2024', '08:00:00', '17:10:10'),
+	('thangnv75', '12/01/2024', '08:00:00', '17:11:11'),
+	('thangnv75', '13/01/2024', '08:05:00', '17:12:12'),
+	('thangnv75', '14/01/2024', '08:00:00', '17:13:13'),
+	('thangnv75', '15/01/2024', '08:00:00', '17:14:14'),
+	('thangnv75', '16/01/2024', '07:45:00', '17:15:15'),
+	('thangnv75', '17/01/2024', '07:50:00', '17:16:16'),
+	('thangnv75', '18/01/2024', '07:55:00', '17:17:17'),
+	('thangnv75', '19/01/2024', '08:00:00', '17:18:18'),
+	('thangnv75', '20/01/2024', '08:00:00', '17:19:19'),
+	('thangnv75', '21/01/2024', '08:00:00', '17:20:20'),
+	('thangnv75', '22/01/2024', '08:00:00', '17:21:21'),
+	('thangnv75', '23/01/2024', '08:00:00', '17:22:22'),
+	('thangnv75', '24/01/2024', '08:00:00', '17:23:23'),
+	('thangnv75', '25/01/2024', '08:00:00', '17:24:24'),
+	('thangnv75', '26/01/2024', '08:00:00', '17:25:25'),
+	('thangnv75', '27/01/2024', '08:00:00', '17:26:26'),
+	('thangnv75', '28/01/2024', '08:00:00', '17:27:27'),
+	('thangnv75', '29/01/2024', '08:00:00', '17:28:28'),
+	('thangnv75', '30/01/2024', '08:00:00', '17:29:29'),
+	('thangnv75', '31/01/2024', '08:00:00', '17:30:30'),
+	('thangnv75', '01/02/2024', '08:00:00', '17:00:00'),
+	('thangnv75', '02/02/2024', '08:00:00', '17:01:01'),
+	('thangnv75', '03/02/2024', '07:59:05', '17:02:02'),
+	('thangnv75', '04/02/2024', '08:00:00', '17:03:03'),
+	('thangnv75', '05/02/2024', '08:00:00', '17:04:04'),
+	('thangnv75', '06/02/2024', '08:00:00', '17:05:05'),
+	('thangnv75', '07/02/2024', '07:45:00', '17:06:06'),
+	('thangnv75', '08/02/2024', '07:50:00', '17:07:07'),
+	('thangnv75', '09/02/2024', '07:55:00', '17:08:08'),
+	('thangnv75', '10/02/2024', '08:00:00', '17:09:09'),
+	('thangnv75', '11/02/2024', '08:00:00', '17:10:10'),
+	('thangnv75', '12/02/2024', '08:00:00', '17:11:11'),
+	('thangnv75', '13/02/2024', '08:00:00', '17:12:12'),
+	('thangnv75', '14/02/2024', '08:00:00', '17:13:13'),
+	('thangnv75', '15/02/2024', '08:00:00', '17:14:14'),
+	('thangnv75', '16/02/2024', '08:00:00', '17:15:15'),
+	('thangnv75', '17/02/2024', '08:00:00', '17:16:16'),
+	('thangnv75', '18/02/2024', '08:00:00', '17:17:17'),
+	('thangnv75', '19/02/2024', '08:00:00', '17:18:18'),
+	('thangnv75', '20/02/2024', '08:00:00', '17:19:19'),
+	('thangnv75', '21/02/2024', '07:48:00', '17:20:20'),
+	('thangnv75', '22/02/2024', '07:52:00', '17:21:21'),
+	('thangnv75', '23/02/2024', '07:59:00', '17:22:22'),
+	('thangnv75', '24/02/2024', '07:48:00', '17:23:23'),
+	('thangnv75', '25/02/2024', '07:52:00', '17:24:24'),
+	('thangnv75', '26/02/2024', '07:59:05', '17:25:25'),
+	('thangnv75', '27/02/2024', '07:48:03', '17:26:26'),
+	('thangnv75', '28/02/2024', '07:52:00', '17:27:27'),
+	('thangnv75', '29/02/2024', '07:59:00', '17:28:28');
+
+INSERT INTO Working (employeeId, dateWorking , firstEntryTime, lastExistTime) VALUES
+	('HE153206', '01/01/2024', '07:45:00', '17:00:00'),
+	('HE153206', '02/01/2024', '07:50:00', '17:01:01'),
+	('HE153206', '03/01/2024', '07:55:00', '17:02:02'),
+	('HE153206', '04/01/2024', '08:00:00', '17:03:03'),
+	('HE153206', '05/01/2024', '08:00:00', '17:04:04'),
+	('HE153206', '08/01/2024', '08:00:00', '17:07:07'),
+	('HE153206', '10/01/2024', '08:00:00', '17:09:09'),
+	('HE153206', '11/01/2024', '08:00:00', '17:10:10'),
+	('HE153206', '12/01/2024', '08:00:00', '17:11:11'),
+	('HE153206', '16/01/2024', '07:45:00', '17:15:15'),
+	('HE153206', '17/01/2024', '07:50:00', '17:16:16'),
+	('HE153206', '18/01/2024', '07:55:00', '17:17:17'),
+	('HE153206', '22/01/2024', '08:00:00', '17:21:21'),
+	('HE153206', '23/01/2024', '08:00:00', '17:22:22'),
+	('HE153206', '24/01/2024', '08:00:00', '17:23:23'),
+	('HE153206', '26/01/2024', '08:00:00', '17:25:25'),
+	('HE153206', '29/01/2024', '08:00:00', '17:28:28'),
+	('HE153206', '30/01/2024', '08:00:00', '17:29:29'),
+	('HE153206', '31/01/2024', '08:00:00', '17:30:30'),
+	('HE153206', '01/02/2024', '08:00:00', '17:00:00'),
+	('HE153206', '02/02/2024', '08:00:00', '17:01:01'),
+	('HE153206', '06/02/2024', '08:00:00', '17:05:05'),
+	('HE153206', '07/02/2024', '07:45:00', '17:06:06'),
+	('HE153206', '08/02/2024', '07:50:00', '17:07:07'),
+	('HE153206', '09/02/2024', '07:55:00', '17:08:08'),
+	('HE153206', '12/02/2024', '08:00:00', '17:11:11'),
+	('HE153206', '13/02/2024', '08:00:00', '17:12:12'),
+	('HE153206', '14/02/2024', '08:00:00', '17:13:13'),
+	('HE153206', '15/02/2024', '08:00:00', '17:14:14'),
+	('HE153206', '16/02/2024', '08:00:00', '17:15:15'),
+	('HE153206', '20/02/2024', '08:00:00', '17:19:19'),
+	('HE153206', '21/02/2024', '07:48:00', '17:20:20'),
+	('HE153206', '22/02/2024', '07:52:00', '17:00:00'),
+	('HE153206', '23/02/2024', '07:59:00', '17:00:00'),
+	('HE153206', '27/02/2024', '07:48:03', '17:00:00'),
+	('HE153206', '28/02/2024', '07:52:00', '17:00:00'),
+	('HE153206', '29/02/2024', '07:59:00', '17:00:00');
