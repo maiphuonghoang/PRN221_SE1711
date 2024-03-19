@@ -5,8 +5,6 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FPTCompanyMWbe", "FPTCompanyMWbe\FPTCompanyMWbe.csproj", "{6A27148D-439D-4152-AFD7-D153C29C47B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeCRUD", "..\EmployeeCRUD\EmployeeCRUD\EmployeeCRUD.csproj", "{E2D1B9E1-0406-4306-B76F-00C3F743EFBA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{6A27148D-439D-4152-AFD7-D153C29C47B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A27148D-439D-4152-AFD7-D153C29C47B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A27148D-439D-4152-AFD7-D153C29C47B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2D1B9E1-0406-4306-B76F-00C3F743EFBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2D1B9E1-0406-4306-B76F-00C3F743EFBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2D1B9E1-0406-4306-B76F-00C3F743EFBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2D1B9E1-0406-4306-B76F-00C3F743EFBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

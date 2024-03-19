@@ -10,9 +10,13 @@ namespace FPTCompanyMWbe.Repository
         {
             _context = context;
         }
-        public async Task<Employee> GetEmployeeId(string id)
+        public Employee GetEmployeeWithStandardTime(string employeeId)
         {
-            return await _context.Employees.FindAsync(id);
+            return _context.Employees
+                .Include(e => e.Workings)
+                .Include(e => e.Participates)
+                .ThenInclude(p => p.StandardTime)
+                .FirstOrDefault(e => e.EmployeeId.Equals(employeeId));
         }
     }
 }

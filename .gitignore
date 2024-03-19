@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/FPTCompanyMW/FPTCompanyMWbe/FPTCompanyMWbe/Services/Impl/WorkingTimeService.cs

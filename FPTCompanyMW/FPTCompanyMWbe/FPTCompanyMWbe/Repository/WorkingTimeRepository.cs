@@ -7,10 +7,16 @@ namespace FPTCompanyMWbe.Repository
     public class WorkingTimeRepository
     {
         private readonly PRN221_FPTCompanyMWContext _context;
-        public WorkingTimeRepository(PRN221_FPTCompanyMWContext context)
+        private readonly EmployeeRepository _employeeRepository;
+        public WorkingTimeRepository(PRN221_FPTCompanyMWContext context, EmployeeRepository employeeRepository)
         {
             _context = context;
+            _employeeRepository = employeeRepository;
         }
-
+        public List<Working> GetWorkingTimeByEmployeeIdAndDate(string employeeId, DateTime from, DateTime to)
+        {
+            var employee = _employeeRepository.GetEmployeeWithStandardTime(employeeId);
+            return employee.Workings.Where(w=> w.DateWorking >= from && w.DateWorking <= to).ToList();
+        }
     }
 }
