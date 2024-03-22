@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using FPTCompanyMWbe.Model.Response;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -26,7 +27,7 @@ namespace FPTCompanyMWbe.Models
         public virtual DbSet<Role> Roles { get; set; } = null!;
         public virtual DbSet<StandardTime> StandardTimes { get; set; } = null!;
         public virtual DbSet<Working> Workings { get; set; } = null!;
-
+        public virtual DbSet<EmployeeInfoResponse> EmployeeInfoResponse { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

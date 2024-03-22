@@ -20,7 +20,7 @@ namespace FPTCompanyMWbe.Controllers
         public async Task<IActionResult> GetWorkingTimeOfEmployee(
             DateTime from, DateTime to,
             string employeeId = "HE151095",
-            string sortBy = "DateWorking", string sortOrder = "desc",
+            string sortBy = "dateWorking", string sortOrder = "desc",
             int page = 1, int pageSize = 5)
         {
             var data = await workingTimeService.GetWorkingTimeOfEmployeeAsync(employeeId, from, to, page, pageSize, sortBy, sortOrder);

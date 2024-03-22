@@ -15,6 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PRN221_FPTCompanyMWContext>(option => option.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
 builder.Services.AddTransient<IWorkingTimeService, WorkingTimeService>();
+builder.Services.AddTransient<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<EmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<WorkingTimeRepository, WorkingTimeRepository>();
 var app = builder.Build();

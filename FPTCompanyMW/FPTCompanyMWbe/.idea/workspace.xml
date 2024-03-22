@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69acbcea-e07a-4af7-a81a-5d22129db58e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FPTCompanyMWbe/Services/Impl/WorkingTimeService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPTCompanyMWbe/Model/Response/GetWorkingTimeResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FPTCompanyMWbe/Model/Response/GetWorkingTimeResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPTCompanyMWbe/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FPTCompanyMWbe/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPTCompanyMWbe/Repository/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FPTCompanyMWbe/Repository/EmployeeRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,24 +17,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2drUq2ED4fE3ZojCckmYypw7FWO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/SPRING_2024_FPT/PRN221/PRN221_SE1711/FPTCompanyMW/FPTCompanyMWbe",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/SPRING_2024_FPT/PRN221/PRN221_SE1711/FPTCompanyMW/FPTCompanyMWbe&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

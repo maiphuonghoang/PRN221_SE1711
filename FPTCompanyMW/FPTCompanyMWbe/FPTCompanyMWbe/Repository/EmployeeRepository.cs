@@ -1,6 +1,6 @@
-﻿using FPTCompanyMWbe.Models;
+﻿using FPTCompanyMWbe.Model.Response;
+using FPTCompanyMWbe.Models;
 using Microsoft.EntityFrameworkCore;
-
 namespace FPTCompanyMWbe.Repository
 {
     public class EmployeeRepository
@@ -17,6 +17,27 @@ namespace FPTCompanyMWbe.Repository
                 .Include(e => e.Participates)
                 .ThenInclude(p => p.StandardTime)
                 .FirstOrDefault(e => e.EmployeeId.Equals(employeeId));
+        }
+        public List<EmployeeInfoResponse> GetEmployeeByGroup(string groupCode)
+        {
+            string sqlQuery = @"
+                SELECT e.employeeId, e.employeeName, g.groupCode, 
+                       j.jobCode, j.jobName, 
+                       jr.jobRank, jr.packageCode, 
+                       pk.packageSalary, 
+                       st.standardTimeId, st.morningStartTime, st.afternoonEndTime
+                FROM [Group] g 
+                JOIN Participate p ON g.groupCode = p.groupCode 
+                JOIN Employee e ON e.employeeId = p.employeeId 
+                JOIN Salary s ON s.employeeId = e.employeeId
+                JOIN JobRank jr ON jr.jobRankId = s.jobRankId
+                JOIN Job j ON j.jobCode = jr.jobCode
+                JOIN Package pk ON pk.packageCode = jr.packageCode
+                JOIN StandardTime st ON st.standardTimeId = p.standardTimeId 
+                WHERE g.groupCode = {0}";
+
+            return _context.EmployeeInfoResponse.FromSqlRaw(sqlQuery, groupCode).ToList();
+
         }
     }
 }
