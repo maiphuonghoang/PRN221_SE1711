@@ -18,5 +18,15 @@ namespace FPTCompanyMWbe.Repository
             var employee = _employeeRepository.GetEmployeeWithStandardTime(employeeId);
             return employee.Workings.Where(w=> w.DateWorking >= from && w.DateWorking <= to).ToList();
         }
+        public List<Working> GetStandardWorkingTimeByEmployeeIdAndDate(string employeeId, DateTime from, DateTime to)
+        {
+            var employee = _employeeRepository.GetEmployeeWithStandardTime(employeeId);
+            return employee.Workings
+                .Where(w => w.DateWorking >= from && w.DateWorking <= to &&
+                            w.DateWorking.HasValue && 
+                            w.DateWorking.Value.DayOfWeek != DayOfWeek.Saturday &&
+                            w.DateWorking.Value.DayOfWeek != DayOfWeek.Sunday)
+                .ToList();
+        }
     }
 }
