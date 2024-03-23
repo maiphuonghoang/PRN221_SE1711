@@ -1,4 +1,5 @@
-﻿using FPTCompanyMWbe.Model.Response;
+﻿using FPTCompanyMWbe.Entity;
+using FPTCompanyMWbe.Model.Response;
 using FPTCompanyMWbe.Models;
 using FPTCompanyMWbe.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -177,7 +178,7 @@ namespace FPTCompanyMWbe.Services.Impl
                     }
 
                 }
-                _logger.LogInformation("Background worker started at: {time}", DateTimeOffset.Now);
+                _logger.LogInformation("Background worker ended at: {time}", DateTimeOffset.Now);
                 _logger.LogInformation(salaries.Count + "");
                 for (int i = 0; i < salaries.Count; i++)
                 {
@@ -185,6 +186,27 @@ namespace FPTCompanyMWbe.Services.Impl
                     double salaryMoney = salaries[i].WorkedDays != 0?((double)salaries[i].PackageSalary * salaries[i].WorkedDays  / salaries[i].StandardDays) - ((salaries[i].EarlyDays + salaries[i].LateDays) * 20000) : 0;
                     _logger.LogInformation($"Salary at index {i}: {salary.EmployeeId} {salary.PackageSalary} {salaries[i].StandardDays} {salaries[i].WorkedDays} {salaries[i].EarlyDays} {salaries[i].LateDays} {salaryMoney}"); 
                 }
+                List<SalaryHistory> insertData = new List<SalaryHistory>();
+                foreach(var s in salaries)
+                {
+                    insertData.Add(new SalaryHistory
+                    {
+                        Id = 0,
+                        EmployeeId = s.EmployeeId,
+                        WorkedDays = s.WorkedDays,
+                        StandardDays = (int) s.StandardDays,
+                        EarlyDays = s.EarlyDays,
+                        LateDays = s.LateDays,
+                        CurrentMonth = 2, 
+                        SalaryMoney = s.WorkedDays != 0
+                            ? ((double)s.PackageSalary * s.WorkedDays / s.StandardDays) - ((s.EarlyDays + s.LateDays) * 20000)
+                            : 0
+                    });
+
+                }
+                await scopeContext.SalaryHistories.AddRangeAsync(insertData);
+                await scopeContext.SaveChangesAsync();
+
             }
         }
 

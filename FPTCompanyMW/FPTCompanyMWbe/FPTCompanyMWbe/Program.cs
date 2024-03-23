@@ -1,3 +1,4 @@
+using FPTCompanyMWbe.Entity;
 using FPTCompanyMWbe.Models;
 using FPTCompanyMWbe.Repository;
 using FPTCompanyMWbe.Services;

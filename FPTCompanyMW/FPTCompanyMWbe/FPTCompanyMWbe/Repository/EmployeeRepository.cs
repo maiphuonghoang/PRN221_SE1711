@@ -1,4 +1,5 @@
-﻿using FPTCompanyMWbe.Model.Response;
+﻿using FPTCompanyMWbe.Entity;
+using FPTCompanyMWbe.Model.Response;
 using FPTCompanyMWbe.Models;
 using Microsoft.EntityFrameworkCore;
 namespace FPTCompanyMWbe.Repository

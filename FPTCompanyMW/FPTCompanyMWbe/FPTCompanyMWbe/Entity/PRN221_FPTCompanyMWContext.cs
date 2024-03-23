@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using FPTCompanyMWbe.Entity;
 using FPTCompanyMWbe.Model.Response;
+using FPTCompanyMWbe.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace FPTCompanyMWbe.Models
+namespace FPTCompanyMWbe.Entity
 {
     public partial class PRN221_FPTCompanyMWContext : DbContext
     {
@@ -25,9 +27,11 @@ namespace FPTCompanyMWbe.Models
         public virtual DbSet<Package> Packages { get; set; } = null!;
         public virtual DbSet<Participate> Participates { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
+        public virtual DbSet<SalaryHistory> SalaryHistories { get; set; } = null!;
         public virtual DbSet<StandardTime> StandardTimes { get; set; } = null!;
         public virtual DbSet<Working> Workings { get; set; } = null!;
         public virtual DbSet<EmployeeInfoResponse> EmployeeInfoResponse { get; set; } = null!;
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -270,6 +274,30 @@ namespace FPTCompanyMWbe.Models
                     .HasMaxLength(150)
                     .IsUnicode(false)
                     .HasColumnName("roleName");
+            });
+
+            modelBuilder.Entity<SalaryHistory>(entity =>
+            {
+                entity.ToTable("SalaryHistory");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.CurrentMonth).HasColumnName("currentMonth");
+
+                entity.Property(e => e.EarlyDays).HasColumnName("earlyDays");
+
+                entity.Property(e => e.EmployeeId)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("employeeId");
+
+                entity.Property(e => e.LateDays).HasColumnName("lateDays");
+
+                entity.Property(e => e.SalaryMoney).HasColumnName("salaryMoney");
+
+                entity.Property(e => e.StandardDays).HasColumnName("standardDays");
+
+                entity.Property(e => e.WorkedDays).HasColumnName("workedDays");
             });
 
             modelBuilder.Entity<StandardTime>(entity =>
