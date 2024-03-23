@@ -62,5 +62,13 @@ namespace FPTCompanyMWbe.Controllers
                 }
             }
         }
+
+
+        [HttpGet("group")]
+        public async Task<ActionResult> GroupWorkingTine(DateTime date, string groupCode = "GHC")
+        {
+            var data = await workingTimeService.GetCheckingWeeklyOfListEmployeeAsync(date, groupCode);
+            return Ok(data);
+        }
     }
 }

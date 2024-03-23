@@ -12,5 +12,6 @@ namespace FPTCompanyMWbe.Services
         Task<List<CheckingResponse>> GetCheckingWeeklyOfEmployeeAsync(string employeeId, DateTime date);
         Task SaveDoingCheckingAsync(CheckingRequest request);
         DataTable GetWorkingTimeExportData(string employeeId);
+        Task<Dictionary<string, List<CheckingResponse>>> GetCheckingWeeklyOfListEmployeeAsync(DateTime date, String groupCode);
     }
 }
