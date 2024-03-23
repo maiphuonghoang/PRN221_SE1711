@@ -17,6 +17,7 @@ namespace FPTCompanyMWbe.Services.Impl
         public Task<SalaryResponse> GetSalaryByMonth(string employeeId, DateTime date)
         {
             var salary = new SalaryResponse();
+            salary.EmployeeId = employeeId;
             DateTime firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
 
             // Get the last day of the month by moving to the next month and subtracting one day

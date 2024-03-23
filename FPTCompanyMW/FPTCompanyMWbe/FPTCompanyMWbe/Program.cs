@@ -18,8 +18,9 @@ builder.Services.AddTransient<IWorkingTimeService, WorkingTimeService>();
 builder.Services.AddTransient<ISalaryService, SalaryService>();
 builder.Services.AddTransient<IEmployeeService, EmployeeService>();
 builder.Services.AddTransient<IAccountService, AccountService>();
-builder.Services.AddScoped<EmployeeRepository, EmployeeRepository>();
-builder.Services.AddScoped<WorkingTimeRepository, WorkingTimeRepository>();
+builder.Services.AddTransient<EmployeeRepository, EmployeeRepository>();
+builder.Services.AddTransient<WorkingTimeRepository, WorkingTimeRepository>();
+builder.Services.AddHostedService<MyBackgroundService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

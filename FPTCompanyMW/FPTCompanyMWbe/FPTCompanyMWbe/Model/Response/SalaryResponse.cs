@@ -2,6 +2,7 @@
 {
     public class SalaryResponse
     {
+        public string EmployeeId { get; set; }
         public double WorkedDays { get; set; } = 0;
         public int LateDays { get; set; } = 0;
         public int EarlyDays { get; set; } = 0;
