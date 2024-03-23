@@ -1,4 +1,5 @@
-﻿using FPTCompanyMWbe.Model.Request;
+﻿using ClosedXML.Excel;
+using FPTCompanyMWbe.Model.Request;
 using FPTCompanyMWbe.Models;
 using FPTCompanyMWbe.Services;
 using FPTCompanyMWbe.Utils;
@@ -46,6 +47,20 @@ namespace FPTCompanyMWbe.Controllers
         {
             await workingTimeService.SaveDoingCheckingAsync(request);
             return Ok();
+        }
+        [HttpGet("ExportExcel")]
+        public ActionResult ExportExcel(string employeeId)
+        {
+            var data = workingTimeService.GetWorkingTimeExportData(employeeId);
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.AddWorksheet(data, "Working Time Report");
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    wb.SaveAs(ms);
+                    return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Sample.xlsx");
+                }
+            }
         }
     }
 }

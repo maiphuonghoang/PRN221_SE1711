@@ -17,6 +17,7 @@ builder.Services.AddDbContext<PRN221_FPTCompanyMWContext>(option => option.UseSq
 builder.Services.AddTransient<IWorkingTimeService, WorkingTimeService>();
 builder.Services.AddTransient<ISalaryService, SalaryService>();
 builder.Services.AddTransient<IEmployeeService, EmployeeService>();
+builder.Services.AddTransient<IAccountService, AccountService>();
 builder.Services.AddScoped<EmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<WorkingTimeRepository, WorkingTimeRepository>();
 var app = builder.Build();

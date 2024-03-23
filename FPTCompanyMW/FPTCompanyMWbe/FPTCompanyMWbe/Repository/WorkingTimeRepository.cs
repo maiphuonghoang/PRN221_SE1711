@@ -18,6 +18,11 @@ namespace FPTCompanyMWbe.Repository
             var employee = _employeeRepository.GetEmployeeWithStandardTime(employeeId);
             return employee.Workings.Where(w=> w.DateWorking >= from && w.DateWorking <= to).ToList();
         }
+        public List<Working> GetWorkingTimeByEmployeeId(string employeeId)
+        {
+            var employee = _employeeRepository.GetEmployeeWithStandardTime(employeeId);
+            return employee.Workings.ToList();
+        }
         public List<Working> GetStandardWorkingTimeByEmployeeIdAndDate(string employeeId, DateTime from, DateTime to)
         {
             var employee = _employeeRepository.GetEmployeeWithStandardTime(employeeId);
